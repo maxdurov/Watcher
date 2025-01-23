@@ -4,7 +4,7 @@
 
 TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION:  Apache License 2.0
 
-![Watcher](https://i.ibb.co/qxHsQvw/prevy.png)
+![Watcher](https://github.com/maxdurov/Watcher/blob/main/prevy.png?raw=true)
 
 # Быстрый старт
 

@@ -1,0 +1,34 @@
+﻿<Window x:Class="Watcher.Pages.Events"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Watcher.Pages"
+        mc:Ignorable="d"
+        Title="События" MinHeight="450" MinWidth="400" Width="800" Height="450" Icon="pack://application:,,,/icon.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid Background="{StaticResource bg-primary}">
+            <Border Style="{StaticResource main_panel}" Margin="5">
+                <TextBox x:Name="TextBlock" AcceptsReturn="True" MaxLines="50000" MaxLength="99999999" TextWrapping="Wrap" d:Text="TextBox" IsReadOnly="True" VerticalScrollBarVisibility="Auto">
+                    <TextBox.Template>
+                        <ControlTemplate TargetType="TextBox">
+                            <ScrollViewer x:Name="PART_ContentHost" ScrollChanged="ScrollViewer_ScrollChanged" />
+                        </ControlTemplate>
+                    </TextBox.Template>
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ToClose" Content="Закрыть" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Click="ToClose_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>

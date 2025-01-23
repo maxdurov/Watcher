@@ -1,0 +1,36 @@
+﻿<Window x:Class="Watcher.Pages.Settings.PopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Watcher.Pages.Settings"
+        mc:Ignorable="d"
+        Title="Настройки" MinHeight="450" MinWidth="800" Height="450" Width="800" Icon="pack://application:,,,/icon.png">
+    <Grid Background="{StaticResource bg-primary}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="3" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Cancel" Content="Отмена" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" Click="Cancel_Click" />
+                <Button x:Name="Save" Grid.Column="1" Content="Сохранить" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,0" Click="Save_Click"/>
+            </Grid>
+            <Border Style="{StaticResource main_panel}" Grid.Row="2">
+                <TextBox x:Name="FieldResult" d:Text="FieldResult" MaxLines="9999" VerticalScrollBarVisibility="Auto" MaxLength="100000" AcceptsReturn="True"/>
+            </Border>
+            <Border Style="{StaticResource main_panel}" Grid.Row="1" Margin="10,5,10,0">
+                <TextBlock TextWrapping="Wrap" Text="{Binding Instruction}" d:Text="Instruction"/>
+
+            </Border>
+            <Label Content="{Binding HeaderName}" d:Content="HeaderName"  HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22"/>
+        </Grid>
+
+    </Grid>
+</Window>
